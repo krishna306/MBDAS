@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 const connection = require("../connection");
 const Applicant = require("./Applicant");
 const deceasedSchema = new mongoose.Schema({
-  creator: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Applicant',
- },
   aadhar: {
     type: String,
     unique: [true, "Person ID of deceased should be unique."],
